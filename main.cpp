@@ -1,9 +1,10 @@
 #include <iostream>
 #include "TodoList.h"
 
-int main() {
+int main()
+{
     TodoList list;
-    Task testTask;
+    Task testTask("Testname",);
 
     testTask.name = "TEST NAME";
     testTask.description = "TEST DESCRIPTION";
@@ -18,7 +19,8 @@ int main() {
 
     auto resultList = list.resolvedTasks();
 
-    for (auto resultTask: resultList) {
+    for (auto resultTask: resultList)
+    {
         cout << resultTask.display();
     }
     return 0;
